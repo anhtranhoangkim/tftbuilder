@@ -14,6 +14,14 @@ export type TraitInfo = {
   icon: string
 }
 
+export type Item = {
+  id: string
+  name: string
+  short: string
+  category: 'Tank' | 'Damage' | 'Utility'
+  color: string
+}
+
 export type CompCard = {
   name: string
   champions: Champion[]
@@ -38,6 +46,23 @@ const championPool: Champion[] = [
 ]
 
 export const champions = championPool
+
+export const itemPool: Item[] = [
+  { id: 'bramble-vest', name: 'Bramble', short: 'BR', category: 'Tank', color: '#0f766e' },
+  { id: 'warmogs', name: 'Warmog', short: 'WM', category: 'Tank', color: '#0b7285' },
+  { id: 'dragons-claw', name: "Dragon's", short: 'DC', category: 'Tank', color: '#0369a1' },
+  { id: 'redemption', name: 'Redeem', short: 'RD', category: 'Tank', color: '#1d4ed8' },
+  { id: 'giant-slayer', name: 'Giant', short: 'GS', category: 'Damage', color: '#4f46e5' },
+  { id: 'deathblade', name: 'Death', short: 'DB', category: 'Damage', color: '#6d28d9' },
+  { id: 'infinity-edge', name: 'Infinity', short: 'IE', category: 'Damage', color: '#7c3aed' },
+  { id: 'rabadons', name: 'Rabadon', short: 'RB', category: 'Damage', color: '#9333ea' },
+  { id: 'nashor-tooth', name: 'Nashor', short: 'NA', category: 'Damage', color: '#a21caf' },
+  { id: 'sunfire-cape', name: 'Sunfire', short: 'SF', category: 'Utility', color: '#be185d' },
+  { id: 'ionic-spark', name: 'Ionic', short: 'IS', category: 'Utility', color: '#db2777' },
+  { id: 'zephyr', name: 'Zephyr', short: 'ZP', category: 'Utility', color: '#e11d48' },
+  { id: 'thieves-gloves', name: 'Thief', short: 'TG', category: 'Utility', color: '#f59e0b' },
+  { id: 'shroud', name: 'Shroud', short: 'SH', category: 'Utility', color: '#d97706' },
+]
 
 export const trendingComps: CompCard[] = [
   {
